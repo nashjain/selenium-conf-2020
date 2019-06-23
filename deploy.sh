@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -zrpt --delete --progress --force --delete-excluded --exclude=deploy.sh --exclude=theme.css --exclude=app.js --exclude=node_modules --exclude='.gitignore' --exclude=README.md --exclude=LICENSE --exclude=.DS_Store --exclude=.git --exclude=.idea ~/Sites/seconf20/ $USER@naresh.webfactional.com:/home/naresh/webapps/seconf20
