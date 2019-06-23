@@ -1,6 +1,6 @@
-# seconf2016
+# SeConf2020
 
-Website for Selenium Conf India 2016
+Website for Selenium Conf India 2020
 
 ## How to run the project
 
