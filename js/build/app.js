@@ -27,13 +27,6 @@
       $('.mobile-nav-links').slideToggle();
     });
 
-    // $('.scroll-link').click(function(e){
-    //   // e.preventDefault();
-    //   // var $to = $($(this).data('scrollto'));
-    //   // console.log($to);
-    //   // smoothScroll($to);
-    // });
-
     $('.popup-trigger').click(function(e){
       var who = $(this);
       e.preventDefault();
@@ -212,8 +205,13 @@
         topMenuHeight = topMenu.outerHeight()+15,
         menuItems = topMenu.find("li.scrollspy-item").find('a'),
         scrollItems = menuItems.map(function(){
-          var item = $($(this).attr("href"));
-          if (item.length) { return item; }
+          var href = $(this).attr("href");
+          if(href && href.indexOf('#')===0) {
+            var item = $(href);
+            if (item.length) {
+              return item;
+            }
+          }
         });
 
         // Scroll event trigger
